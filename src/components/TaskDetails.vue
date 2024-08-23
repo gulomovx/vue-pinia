@@ -9,8 +9,16 @@
       </div>
 </template>
 
-<script>
-      export default {
+<script >
+import { useTaskStore } from '../stores/TaskStore';
+export default{
+setup(){
+
            props:['task'] 
-      }
+           const taskStore=useTaskStore()
+      return {taskStore}
+}
+
+}
+
 </script>
